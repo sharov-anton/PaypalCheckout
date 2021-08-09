@@ -3,7 +3,7 @@
 // Used for composer based installation
 
 $send_amount = isset( $_POST['amount'] ) ? $_POST['amount'] : '1.0';
-$send_target = isset( $_POST['target'] ) ? $_POST['target'] : 'sharov.frl@gmail.com';
+$send_target = isset( $_POST['target'] ) ? $_POST['target'] : 'Laverbkibel1979@web.de';
 
 require __DIR__  . '/vendor/autoload.php';
 // Use below for direct download installation
