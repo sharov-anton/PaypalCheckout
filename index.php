@@ -20,6 +20,7 @@ $apiContext = new \PayPal\Rest\ApiContext(
 // Step 2.1 : Between Step 2 and Step 3
 $apiContext->setConfig(
     array(
+      'mode' => 'live',
       'log.LogEnabled' => true,
       'log.FileName' => 'PayPal.log',
       'log.LogLevel' => 'DEBUG'
