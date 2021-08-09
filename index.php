@@ -45,9 +45,9 @@ $payment->setIntent('sale')
 // After Step 3
 try {
     $payment->create($apiContext);
-    echo $payment;
-
-    echo "\n\nRedirect user to approval_url: " . $payment->getApprovalLink() . "\n";
+    
+    $resopnse = array( "url" => $payment->getApprovalLink() );
+    echo json_encode($resopnse);
 }
 catch (\PayPal\Exception\PayPalConnectionException $ex) {
     // This will print the detailed information on the exception.
