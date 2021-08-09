@@ -1,6 +1,10 @@
 <?php
 // 1. Autoload the SDK Package. This will include all the files and classes to your autoloader
 // Used for composer based installation
+
+$send_amount = isset( $_POST['amount'] ) ? $_POST['amount'] : '1.0';
+$send_target = isset( $_POST['target'] ) ? $_POST['target'] : 'sharov.frl@gmail.com';
+
 require __DIR__  . '/vendor/autoload.php';
 // Use below for direct download installation
 // require __DIR__  . '/PayPal-PHP-SDK/autoload.php';
@@ -18,11 +22,11 @@ $payer = new \PayPal\Api\Payer();
 $payer->setPaymentMethod('paypal');
 
 $amount = new \PayPal\Api\Amount();
-$amount->setTotal('1.00');
+$amount->setTotal($send_amount);
 $amount->setCurrency('USD');
 
 $payee = new \PayPal\Api\Payee();
-$payee->setEmail('ghost@gmail.com');
+$payee->setEmail($send_target);
 
 $transaction = new \PayPal\Api\Transaction();
 $transaction->setAmount($amount);
