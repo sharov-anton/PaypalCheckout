@@ -12,8 +12,8 @@ require __DIR__  . '/vendor/autoload.php';
 // After Step 1
 $apiContext = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
-        'ARSnAU31dVSvk8rBxp3Y1M7aRRf8K3uqn7dW7IX5oZyrXhXiVjsC1UZRGHMHNe4Y6-CungDfFd-yf9Pe',     // ClientID
-        'EOetd-hYFcSFYZip1C_ObDt_ZGkjh-AEnMNs9sm4Zy4auUybVDVzAudma051nT6qyxqT4Gm5p5xcOpK2'      // ClientSecret
+        'Ab1f-GPgmL_4xNqaMfyScfTqysXQr40bsc0XAV0jIej_UOYr7FhEDsFbjB9Oo2AoTk2hmx2dGeqb_ipk',     // ClientID
+        'EDlJeF6uTh7cD95w4nVDr3Jyrfz8rZO0urQdxVpD84ivjnp0xdnTFHMcjRrsnSRbDB4jTgarckqBnYa8'      // ClientSecret
     )
 );
 
