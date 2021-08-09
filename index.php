@@ -32,15 +32,15 @@ $transaction = new \PayPal\Api\Transaction();
 $transaction->setAmount($amount);
 $transaction->setpayee($payee);
 
-$redirectUrls = new \PayPal\Api\RedirectUrls();
-$redirectUrls->setReturnUrl("https://example.com/your_redirect_url.html")
-    ->setCancelUrl("https://example.com/your_cancel_url.html");
+// $redirectUrls = new \PayPal\Api\RedirectUrls();
+// $redirectUrls->setReturnUrl("https://example.com/your_redirect_url.html")
+//     ->setCancelUrl("https://example.com/your_cancel_url.html");
 
 $payment = new \PayPal\Api\Payment();
 $payment->setIntent('sale')
     ->setPayer($payer)
-    ->setTransactions(array($transaction))
-    ->setRedirectUrls($redirectUrls);
+    ->setTransactions(array($transaction));
+    // ->setRedirectUrls($redirectUrls);
 
 // After Step 3
 try {
